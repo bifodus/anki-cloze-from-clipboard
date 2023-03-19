@@ -8,11 +8,6 @@ Anki Cloze Card Creator is a Python script that allows you to create Anki cloze 
 2. Anki Connect plugin installed on your Anki app. Get it from https://ankiweb.net/shared/info/2055492159 and follow the installation instructions provided.
 3. Python 3 installed on your macOS system.
 
-## Installation
-
-1. Clone or download this repository to your local machine.
-2. Open a terminal and navigate to the directory containing the `anki_cloze_from_clipboard.py` script.
-
 ## Usage
 
 1. Copy a text that you want to create a cloze card for to the clipboard.

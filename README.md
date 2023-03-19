@@ -20,7 +20,15 @@ python3 anki_cloze_from_clipboard.py
 3. A dialog box will appear, prompting you to select a deck and highlight the text you want to cloze.
 4. After selecting the deck and highlighting the cloze text, click "OK." The script will create a new cloze card in the selected deck with the highlighted text as the clozed part.
 
-To create a global hotkey (Cmd+Shift+C) for running the script, follow the instructions in the hammerspoon_config.lua file and use Hammerspoon.
+To create a global hotkey (Cmd+Shift+C) for running the script, consider using an application like Hammerspoon and binding the command.  See the following init.lua you can set up with Hammerspoon to create this hotkey.
+
+```
+hs.hotkey.bind({"cmd", "shift"}, "C", function()
+    local pythonScript = "/path/to/anki_cloze_from_clipboard.py"
+    local command = "python3 " .. pythonScript
+    hs.execute("osascript -e 'tell application \"Terminal\" to do script \"" .. command .. "\"'")
+end)
+```
 
 ## License
 
